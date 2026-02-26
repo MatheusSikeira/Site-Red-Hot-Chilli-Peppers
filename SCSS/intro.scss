@@ -1,0 +1,23 @@
+@use 'variaveis';
+
+section.intro{
+    padding: 50px 4%;
+    background-color: rgb(26, 17, 17);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.272);
+     p {
+        font-size: 16px;
+        color: variaveis.$corDoTexto;
+        text-align: center;
+
+        &.subtitulo {
+            font-weight: bold;
+
+        }
+    }
+
+    h1 {
+        font-size: 48px;
+        text-align: center;
+        color: variaveis.$corDoTexto;
+    }
+}

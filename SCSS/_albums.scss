@@ -1,0 +1,22 @@
+@use 'variaveis';
+
+h2.albums-title{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 4%;
+    color: variaveis.$corDoTexto;
+    font-weight: bold;
+}
+@keyframes rodar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.img-disc{
+    background-image: url(../imagens/disc-vinyl-svgrepo-com.svg);
+    animation: rodar 10s infinite linear;
+}
+

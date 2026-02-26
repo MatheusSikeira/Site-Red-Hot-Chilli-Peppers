@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+section.capa {
+    position: relative;
+    padding: 20px 4%;
+    height: 60vh;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/wall2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    animation: zoomInHero 1.5s ease-out;
+    overflow: hidden;
+
+    border-bottom: 4px solid variaveis.$corDoTexto;
+}
+
+/* --- ANIMAÇÕES --- */
+
+@keyframes zoomInHero {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

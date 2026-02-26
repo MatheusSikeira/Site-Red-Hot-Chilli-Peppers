@@ -1,0 +1,113 @@
+@use 'variaveis';
+
+section.integrantes,
+section.shows {
+    padding: 50px 4%;
+
+    h2 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        /* Animação suave para o título ao carregar */
+        animation: fadeInDown 0.8s ease-out;
+    }
+}
+
+.carousel {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    /* Transição suave de altura quando o conteúdo muda */
+    transition: height 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    text-align: center;
+    /* Animação de fade para o conteúdo do slide */
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.carousel-item img {
+    width: 180px !important;
+    height: 180px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 20px !important;
+    color: #333 !important;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    transition: transform 0.2s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.2);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #333;
+    transition: width 0.3s ease; 
+}
+
+.carousel-indicators .active {
+    width: 30px;
+}
+
+/* --- DEFINIÇÕES DAS ANIMAÇÕES (Keyframes) --- */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

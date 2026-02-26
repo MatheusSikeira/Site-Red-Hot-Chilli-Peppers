@@ -1,0 +1,95 @@
+// Variáveis de Tema
+$bw-dark: #000000;
+$bw-light: #ffffff;
+$bw-gray: #f2f2f2;
+$bw-border: #000000; 
+$radius-valor: 15px;
+
+.accordion {
+  --bs-accordion-border-width: 0; 
+  background-color: transparent;
+  padding: 20px 4%;
+
+  .accordion-item {
+    background-color: $bw-light;
+    
+    margin-bottom: 20px; 
+    
+    border: 2px solid $bw-border !important; 
+    
+    border-radius: $radius-valor !important; 
+    overflow: hidden;
+
+    &:last-of-type {
+      border-bottom: 2px solid $bw-border !important;
+    }
+  }
+
+  .accordion-button {
+    background-color: $bw-light;
+    color: $bw-dark;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 1.25rem;
+    transition: all 0.3s ease;
+    border-radius: 0;
+
+    &:not(.collapsed) {
+      background-color: $bw-dark;
+      color: $bw-light;
+      box-shadow: none;
+      
+      &::after {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover:collapsed {
+      background-color: $bw-gray;
+    }
+  }
+
+  .accordion-body {
+    background-color: $bw-light;
+    color: $bw-dark;
+    padding: 2rem 2.2rem;
+    font-size: 0.95rem;
+    
+    .list-group-item {
+      border: none;
+      padding: 10px 0;
+      
+      a {
+        color: $bw-dark;
+        transition: 0.2s;
+        &:hover {
+          color: red !important;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+.img-accordion-thumb {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  border: 1px solid $bw-border;
+}
+
+.img-album1 { background-image: url('../imagens/album1.svg'); }
+.img-album2 { background-image: url('../imagens/album2.svg'); }
+.img-album3 { background-image: url('../imagens/album3.svg');}

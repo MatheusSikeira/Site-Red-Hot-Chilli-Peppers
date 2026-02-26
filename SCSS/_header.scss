@@ -1,0 +1,74 @@
+@use 'variaveis';
+
+body header {
+    position: relative;
+    background-color: variaveis.$corDoHeader;
+    padding: 10px 4%;
+    position: relative;
+    z-index: 20;
+    overflow: visible !important;
+
+    .navbar {
+        background-color: transparent !important;
+        box-shadow: none; // Opcional: remove sombras se houver
+    }
+    .nav-link {
+        color: variaveis.$corDoTexto;
+        font-weight: bold;
+        
+    }
+    .dropdown-menu{
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid variaveis.$corDoTexto;
+        
+        .dropdown-item {
+            color: #fff;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+    }
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-image: url('../imagens/california.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.4;
+
+        z-index: -1;
+    }
+}
+
+body header .container {
+    padding: 15px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+body header {
+    font-size: 28px;
+    color: variaveis.$corDoTexto;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    img {
+        &.logo {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

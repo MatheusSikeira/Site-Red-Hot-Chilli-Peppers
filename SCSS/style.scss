@@ -1,0 +1,19 @@
+@use 'variaveis.scss';
+@use 'header.scss';
+@use 'topo.scss';
+@use 'accordion.scss';
+@use 'capa.scss';
+@use 'carrousel.scss';
+@use 'intro.scss';
+@use 'albums.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: variaveis.$corDeFundo;
+}
